@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kosuke Ashida | Webライター ポートフォリオ</title>
+<meta name="description" content="旅・温泉、車、アメカジ、溶接からゲーム・アニメ・漫画・映画まで。幅広い得意ジャンルで「最後まで読まれる記事」を書くWebライター、Kosuke Ashidaのポートフォリオです。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23142844'/%3E%3Ctext x='32' y='42' font-family='sans-serif' font-size='26' font-weight='bold' fill='%23ffffff' text-anchor='middle'%3EKA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-900:#0e1c34;
+  --navy-800:#142844;
+  --navy-700:#1d3a63;
+  --accent:#2e6fd9;
+  --accent-dark:#235cb8;
+  --gold:#c9a227;
+  --ink:#1f2937;
+  --ink-soft:#5b6675;
+  --line:#e3e8ef;
+  --bg-soft:#f6f8fb;
+  --white:#ffffff;
+  --radius:14px;
+  --shadow:0 8px 30px rgba(14,28,52,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.9;
+  font-feature-settings:"palt";
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--accent);text-decoration:none}
+.container{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* ===== header ===== */
+.site-header{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  height:64px;
+}
+.brand{display:flex;align-items:center;gap:10px;color:var(--navy-800);font-weight:700;letter-spacing:.04em}
+.brand-mark{
+  width:34px;height:34px;border-radius:9px;background:var(--navy-800);
+  color:#fff;display:grid;place-items:center;
+  font-size:13px;font-weight:900;letter-spacing:.02em;
+}
+.gnav{display:flex;align-items:center;gap:28px}
+.gnav a{color:var(--ink);font-size:14px;font-weight:500}
+.gnav a:hover{color:var(--accent)}
+.btn{
+  display:inline-block;background:var(--accent);color:#fff;
+  padding:11px 26px;border-radius:999px;font-weight:700;font-size:14px;
+  transition:background .2s, transform .2s;
+}
+.btn:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.btn-lg{padding:15px 40px;font-size:16px}
+.btn-ghost{
+  background:transparent;border:1.5px solid rgba(255,255,255,.6);color:#fff;
+}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.nav-toggle span{display:block;width:22px;height:2px;background:var(--navy-800);margin:5px 0;transition:.2s}
+
+/* ===== hero ===== */
+.hero{
+  background:linear-gradient(135deg,var(--navy-900) 0%,var(--navy-800) 55%,var(--navy-700) 100%);
+  color:#fff;
+  padding:110px 0 120px;
+  position:relative;overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;right:-120px;top:-120px;
+  width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(46,111,217,.35),transparent 70%);
+}
+.hero::before{
+  content:"";position:absolute;left:-80px;bottom:-160px;
+  width:360px;height:360px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,162,39,.18),transparent 70%);
+}
+.hero-inner{position:relative;z-index:1;max-width:760px}
+.hero-label{
+  display:inline-block;font-size:13px;letter-spacing:.22em;
+  color:var(--gold);font-weight:700;margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(30px,5.4vw,52px);font-weight:900;line-height:1.45;
+  letter-spacing:.03em;margin-bottom:22px;
+}
+.hero p.lead{
+  font-size:clamp(15px,2vw,17px);color:rgba(255,255,255,.85);
+  margin-bottom:14px;
+}
+.hero .name-line{
+  font-size:14px;color:rgba(255,255,255,.7);letter-spacing:.08em;margin-bottom:36px;
+}
+.hero .name-line strong{color:#fff;font-size:16px;letter-spacing:.1em}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+
+/* ===== sections ===== */
+.section{padding:96px 0}
+.section.alt{background:var(--bg-soft)}
+.sec-head{text-align:center;margin-bottom:56px}
+.sec-label{
+  font-size:12px;letter-spacing:.26em;color:var(--gold);
+  font-weight:700;display:block;margin-bottom:10px;
+}
+.sec-title{
+  font-size:clamp(24px,3.4vw,32px);font-weight:900;color:var(--navy-800);
+  letter-spacing:.04em;
+}
+.sec-desc{margin-top:14px;color:var(--ink-soft);font-size:15px}
+
+/* ===== strengths ===== */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{
+  background:var(--white);border:1px solid var(--line);
+  border-radius:var(--radius);padding:34px 28px;box-shadow:var(--shadow);
+}
+.card .num{
+  font-size:13px;font-weight:900;color:var(--gold);letter-spacing:.18em;
+  margin-bottom:12px;
+}
+.card h3{font-size:18px;font-weight:700;color:var(--navy-800);margin-bottom:12px;line-height:1.6}
+.card p{font-size:14px;color:var(--ink-soft)}
+
+/* ===== services ===== */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.service{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
+}
+.service-head{
+  background:var(--navy-800);color:#fff;padding:24px 30px;
+  display:flex;align-items:center;gap:14px;
+}
+.service-head .icon{
+  width:44px;height:44px;border-radius:11px;background:rgba(255,255,255,.12);
+  display:grid;place-items:center;font-size:20px;flex-shrink:0;
+}
+.service-head h3{font-size:19px;font-weight:700;letter-spacing:.04em}
+.service-head span{display:block;font-size:11px;letter-spacing:.16em;color:rgba(255,255,255,.65);font-weight:500}
+.service-body{padding:28px 30px 30px;flex:1;display:flex;flex-direction:column}
+.service-body ul{list-style:none;margin-bottom:22px}
+.service-body li{
+  font-size:14.5px;padding:9px 0 9px 26px;position:relative;
+  border-bottom:1px dashed var(--line);
+}
+.service-body li::before{
+  content:"✓";position:absolute;left:2px;color:var(--accent);font-weight:900;
+}
+.price{
+  margin-top:auto;background:var(--bg-soft);border-radius:10px;
+  padding:16px 20px;font-size:13.5px;color:var(--ink-soft);
+}
+.price strong{color:var(--navy-800);font-size:17px;font-weight:900}
+
+/* ===== works ===== */
+.work{
+  display:grid;grid-template-columns:460px 1fr;gap:40px;align-items:center;
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:36px;box-shadow:var(--shadow);
+}
+.work + .work{margin-top:32px}
+.work-visual{border-radius:10px;overflow:hidden;box-shadow:0 10px 28px rgba(14,28,52,.18)}
+.work-info .tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tag{
+  font-size:11.5px;font-weight:700;letter-spacing:.06em;
+  background:#eaf1fc;color:var(--accent-dark);
+  border-radius:999px;padding:4px 14px;
+}
+.work-info h3{font-size:20px;font-weight:700;color:var(--navy-800);line-height:1.6;margin-bottom:14px}
+.work-info p{font-size:14.5px;color:var(--ink-soft);margin-bottom:10px}
+.work-info .note{font-size:12px;color:#94a0af}
+
+/* genre grid */
+.genre-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.genre{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px 18px 24px;text-align:center;box-shadow:var(--shadow);
+}
+.genre .g-icon{font-size:32px;display:block;margin-bottom:12px;line-height:1}
+.genre h3{font-size:15.5px;font-weight:700;color:var(--navy-800);margin-bottom:6px}
+.genre p{font-size:12px;color:var(--ink-soft);line-height:1.7}
+/* article mock */
+.article-mock{
+  aspect-ratio:16/10;background:#fff;border:1px solid var(--line);
+  padding:7% 8%;display:flex;flex-direction:column;
+}
+.article-mock .am-site{display:flex;align-items:center;gap:8px;margin-bottom:7%}
+.article-mock .am-site i{width:18px;height:18px;border-radius:5px;background:#2cb696;display:block}
+.article-mock .am-site span{font-size:10px;color:#94a0af;font-weight:700;letter-spacing:.05em}
+.article-mock h4{font-size:clamp(12px,1.7vw,17px);font-weight:900;color:var(--ink);line-height:1.6;margin-bottom:6%}
+.article-mock .am-line{height:7px;border-radius:4px;background:#eef1f5;margin-bottom:4.5%}
+.article-mock .am-line.w80{width:80%}
+.article-mock .am-line.w92{width:92%}
+.article-mock .am-line.w60{width:60%}
+.article-mock .am-meta{margin-top:auto;font-size:9.5px;color:#a8b2bf}
+
+/* client voice */
+.voice{
+  margin-top:32px;background:var(--navy-800);color:#fff;border-radius:var(--radius);
+  padding:34px 38px;display:flex;gap:22px;align-items:flex-start;
+}
+.voice .q{font-size:42px;font-weight:900;color:var(--gold);line-height:1;flex-shrink:0}
+.voice p{font-size:15px;line-height:2}
+.voice small{display:block;margin-top:10px;font-size:12px;color:rgba(255,255,255,.65)}
+
+/* ===== flow ===== */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:step}
+.flow .step{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:30px 22px;text-align:center;position:relative;box-shadow:var(--shadow);
+}
+.flow .step::before{
+  counter-increment:step;content:"0" counter(step);
+  display:block;font-size:15px;font-weight:900;color:var(--gold);
+  letter-spacing:.14em;margin-bottom:10px;
+}
+.flow .step h3{font-size:16px;font-weight:700;color:var(--navy-800);margin-bottom:10px}
+.flow .step p{font-size:13px;color:var(--ink-soft);text-align:left}
+
+/* ===== profile ===== */
+.profile{
+  display:grid;grid-template-columns:220px 1fr;gap:44px;align-items:center;
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:44px;box-shadow:var(--shadow);
+}
+.avatar{
+  width:180px;height:180px;border-radius:50%;
+  background:linear-gradient(135deg,var(--navy-800),var(--navy-700));
+  color:#fff;display:grid;place-items:center;
+  font-size:46px;font-weight:900;letter-spacing:.04em;
+  border:5px solid #eaf0f8;margin:0 auto;
+}
+.profile h3{font-size:22px;font-weight:900;color:var(--navy-800);letter-spacing:.06em}
+.profile .kana{font-size:12.5px;color:var(--ink-soft);letter-spacing:.14em;margin-bottom:16px}
+.profile p{font-size:14.5px;color:var(--ink);margin-bottom:12px}
+.profile dl{
+  display:grid;grid-template-columns:auto 1fr;gap:6px 18px;
+  font-size:13.5px;margin-top:18px;
+}
+.profile dt{color:var(--ink-soft);font-weight:700;white-space:nowrap}
+.profile dd{color:var(--ink)}
+
+/* ===== contact ===== */
+.contact{
+  background:linear-gradient(135deg,var(--navy-900),var(--navy-700));
+  color:#fff;text-align:center;padding:96px 0;
+}
+.contact .sec-title{color:#fff}
+.contact p{color:rgba(255,255,255,.82);font-size:15px;margin:18px auto 36px;max-width:560px}
+.contact .mail{
+  margin-top:26px;font-size:14px;color:rgba(255,255,255,.75);letter-spacing:.05em;
+}
+.contact .mail a{color:#fff;font-weight:700;border-bottom:1px solid rgba(255,255,255,.4)}
+
+/* ===== footer ===== */
+.site-footer{background:var(--navy-900);color:rgba(255,255,255,.55);text-align:center;padding:26px 0;font-size:12px;letter-spacing:.06em}
+
+/* ===== reveal ===== */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.is-visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* ===== responsive ===== */
+@media (max-width:900px){
+  .grid-3{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .genre-grid{grid-template-columns:repeat(2,1fr)}
+  .flow{grid-template-columns:1fr 1fr}
+  .work{grid-template-columns:1fr;padding:26px}
+  .profile{grid-template-columns:1fr;text-align:center;padding:34px 26px}
+  .profile dl{text-align:left}
+  .section{padding:72px 0}
+}
+@media (max-width:720px){
+  .gnav{
+    position:fixed;inset:64px 0 auto 0;background:#fff;
+    flex-direction:column;gap:0;padding:10px 0 16px;
+    border-bottom:1px solid var(--line);
+    display:none;
+  }
+  .gnav.open{display:flex}
+  .gnav a{padding:13px 24px;width:100%;text-align:center}
+  .gnav .btn{margin:10px 24px 0;width:calc(100% - 48px)}
+  .nav-toggle{display:block}
+  .hero{padding:78px 0 88px}
+  .flow{grid-template-columns:1fr}
+  .voice{flex-direction:column;gap:8px;padding:28px 24px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand"><span class="brand-mark">KA</span>Kosuke Ashida</div>
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false" onclick="toggleNav(this)">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="gnav" id="gnav">
+      <a href="#strengths">強み</a>
+      <a href="#service">サービス</a>
+      <a href="#genres">得意ジャンル</a>
+      <a href="#works">制作実績</a>
+      <a href="#flow">ご依頼の流れ</a>
+      <a href="#profile">プロフィール</a>
+      <a class="btn" href="#contact">相談する</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <span class="hero-label">WEB WRITING</span>
+    <h1>「読みたくなる文章」を、<br>あなたのメディアに。</h1>
+    <p class="lead">SEO記事から体験談・レビューまで。読者の悩みに寄り添い、<br>最後まで読まれる記事をお届けします。</p>
+    <p class="name-line">Webライター <strong>Kosuke Ashida</strong></p>
+    <div class="hero-btns">
+      <a class="btn btn-lg" href="#works">制作実績を見る</a>
+      <a class="btn btn-lg btn-ghost" href="#contact">無料で相談する</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="strengths">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-label">STRENGTHS</span>
+      <h2 class="sec-title">選ばれる3つの理由</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <div class="num">REASON 01</div>
+        <h3>読者目線の構成力</h3>
+        <p>PREP法をベースに、冒頭で読者の「言葉にならない悩み」を言語化。最後まで読まれる記事を、構成から設計します。具体的な数字と時間軸で、説得力のある文章に仕上げます。</p>
+      </div>
+      <div class="card reveal">
+        <div class="num">REASON 02</div>
+        <h3>実感を持って語れるジャンルの広さ</h3>
+        <p>旅・温泉、車、アメカジ、溶接、ゲーム・アニメ・漫画・映画まで、自分の言葉で語れる得意ジャンルが豊富。情報の寄せ集めではない、体温のある記事に仕上げます。</p>
+      </div>
+      <div class="card reveal">
+        <div class="num">REASON 03</div>
+        <h3>納期厳守と丁寧なやり取り</h3>
+        <p>ご連絡には原則24時間以内に返信。進捗はこまめにご報告し、納期は必ず守ります。修正のご要望にも柔軟に対応しますので、初めてのご依頼でも安心してお任せください。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="service">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-label">SERVICE</span>
+      <h2 class="sec-title">提供サービス</h2>
+      <p class="sec-desc">新規記事の執筆も、既存記事の改善も。「構成案づくり」から対応します。</p>
+    </div>
+    <div class="grid-2">
+      <div class="service reveal">
+        <div class="service-head">
+          <div class="icon">✍️</div>
+          <div>
+            <span>WRITING</span>
+            <h3>記事執筆</h3>
+          </div>
+        </div>
+        <div class="service-body">
+          <ul>
+            <li>SEO記事・コラム(構成案込み)</li>
+            <li>体験談・レビュー記事</li>
+            <li>商品・サービス紹介記事</li>
+            <li>考察・ランキングなどエンタメ記事</li>
+          </ul>
+          <div class="price">
+            料金目安:文字単価 <strong>1.0円</strong> 〜(応相談)<br>
+            構成案・タイトル案・推敲込み。テーマやボリュームに応じてお見積りします。
+          </div>
+        </div>
+      </div>
+      <div class="service reveal">
+        <div class="service-head">
+          <div class="icon">🔁</div>
+          <div>
+            <span>REWRITE</span>
+            <h3>リライト・記事改善</h3>
+          </div>
+        </div>
+        <div class="service-body">
+          <ul>
+            <li>既存記事のリライト</li>
+            <li>タイトル・見出しの改善提案</li>
+            <li>構成の見直し(SEO・読みやすさ)</li>
+            <li>推敲・誤字脱字チェック</li>
+          </ul>
+          <div class="price">
+            料金目安:<strong>応相談</strong><br>
+            記事の状態と本数に応じてお見積りします。まとめてのご依頼も歓迎です。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="genres">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-label">GENRES</span>
+      <h2 class="sec-title">得意ジャンル</h2>
+      <p class="sec-desc">趣味と経験に根ざした、実感を持って書けるジャンルです。ここにないテーマもお気軽にご相談ください。</p>
+    </div>
+    <div class="genre-grid">
+      <div class="genre reveal"><span class="g-icon">♨️</span><h3>旅・温泉</h3><p>紀行・宿レビュー・観光ガイド</p></div>
+      <div class="genre reveal"><span class="g-icon">🚗</span><h3>車</h3><p>カーライフ・購入ガイド</p></div>
+      <div class="genre reveal"><span class="g-icon">👖</span><h3>ファッション</h3><p>アメカジを中心に</p></div>
+      <div class="genre reveal"><span class="g-icon">🔧</span><h3>溶接・ものづくり</h3><p>専門的な内容もかみ砕いて</p></div>
+      <div class="genre reveal"><span class="g-icon">🎮</span><h3>ゲーム</h3><p>レビュー・攻略・コラム</p></div>
+      <div class="genre reveal"><span class="g-icon">📺</span><h3>アニメ</h3><p>考察・ランキング</p></div>
+      <div class="genre reveal"><span class="g-icon">📚</span><h3>漫画</h3><p>レビュー・おすすめ紹介</p></div>
+      <div class="genre reveal"><span class="g-icon">🎬</span><h3>映画</h3><p>レビュー・考察コラム</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="works">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-label">WORKS</span>
+      <h2 class="sec-title">制作実績・サンプル</h2>
+      <p class="sec-desc">得意ジャンルのサンプル記事は、順次追加予定です。</p>
+    </div>
+
+    <div class="work reveal">
+      <div class="work-visual">
+        <div class="article-mock">
+          <div class="am-site"><i></i><span>note</span></div>
+          <h4>2年直らなかった「音楽が再生できない」、犯人はまさかのマイクだった</h4>
+          <div class="am-line w92"></div>
+          <div class="am-line w80"></div>
+          <div class="am-line w60"></div>
+          <div class="am-meta">体験談・トラブル解決エッセイ</div>
+        </div>
+      </div>
+      <div class="work-info">
+        <div class="tags"><span class="tag">ライティング</span><span class="tag">体験談</span><span class="tag">note</span></div>
+        <h3>PCトラブル解決の体験談記事</h3>
+        <p>2年間放置していたPCの不具合が思わぬ原因だった——という実体験を記事化。「検索しても自分と同じ症状が見つからない」という読者の隠れた悩みを冒頭で言語化し、時系列に沿って臨場感のある構成に仕上げました。</p>
+        <p class="note">※クライアントワークの納品記事は守秘義務のため非公開です。構成・文体の参考としてご覧ください。</p>
+      </div>
+    </div>
+
+    <div class="voice reveal">
+      <div class="q">“</div>
+      <div>
+        <p>クライアントワークとして納品した体験談記事では、具体的なエピソードの描写と読みやすい構成について、発注者さまから高い評価をいただきました。</p>
+        <small>※守秘義務のため記事本文・クライアント名は非公開としています。</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="flow">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-label">FLOW</span>
+      <h2 class="sec-title">ご依頼の流れ</h2>
+    </div>
+    <div class="flow">
+      <div class="step reveal">
+        <h3>ご相談・ヒアリング</h3>
+        <p>目的・ターゲット・納期をお聞かせください。ご相談は無料です。</p>
+      </div>
+      <div class="step reveal">
+        <h3>お見積り・構成案</h3>
+        <p>内容に応じてお見積りと構成案をご提示。すり合わせてから着手します。</p>
+      </div>
+      <div class="step reveal">
+        <h3>制作・初稿納品</h3>
+        <p>進捗を共有しながら制作し、期日までに初稿をお届けします。</p>
+      </div>
+      <div class="step reveal">
+        <h3>修正・最終納品</h3>
+        <p>フィードバックを反映して仕上げます(修正2回まで無料)。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="profile">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-label">PROFILE</span>
+      <h2 class="sec-title">プロフィール</h2>
+    </div>
+    <div class="profile reveal">
+      <div class="avatar">KA</div>
+      <div>
+        <h3>Kosuke Ashida</h3>
+        <div class="kana">Webライター</div>
+        <p>1995年生まれ、O型。「わかりにくい」を「わかった!」に変えることが好きなWebライターです。旅・温泉、車、アメカジ、ゲームやアニメなど、好きなものを自分の言葉で語るのが得意です。</p>
+        <p>読み手がどこでつまずくかを想像しながら、構成から言葉選びまで丁寧に組み立てるのが信条です。納期厳守と、こまめな進捗報告を大切にしています。</p>
+        <dl>
+          <dt>対応業務</dt><dd>Webライティング(記事執筆・リライト)</dd>
+          <dt>得意ジャンル</dt><dd>旅・温泉/溶接/車/ファッション(アメカジ)/ゲーム/アニメ/漫画/映画</dd>
+          <dt>連絡対応</dt><dd>原則24時間以内に返信</dd>
+          <dt>お支払い</dt><dd>クラウドワークス等のクラウドソーシング経由に対応</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <span class="sec-label">CONTACT</span>
+    <h2 class="sec-title">お気軽にご相談ください</h2>
+    <p>「こんな記事を書いてほしい」「テーマは決まっているけど構成から相談したい」など、ざっくりとしたご相談も歓迎です。内容を確認のうえ、24時間以内にご返信します。</p>
+    <a class="btn btn-lg" href="mailto:asdkskgemini@gmail.com?subject=%E3%81%94%E4%BE%9D%E9%A0%BC%E3%83%BB%E3%81%94%E7%9B%B8%E8%AB%87%E3%81%AE%E4%BB%B6">メールで相談する</a>
+    <div class="mail">Email: <a href="mailto:asdkskgemini@gmail.com">asdkskgemini@gmail.com</a></div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">© 2026 Kosuke Ashida</div>
+</footer>
+
+<script>
+function toggleNav(btn){
+  var nav=document.getElementById('gnav');
+  var open=nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded',open?'true':'false');
+}
+document.querySelectorAll('.gnav a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('gnav').classList.remove('open');
+  });
+});
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target);}
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
